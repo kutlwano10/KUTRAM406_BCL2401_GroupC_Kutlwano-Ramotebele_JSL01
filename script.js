@@ -3,9 +3,9 @@
 function validateInput(input) {
     // 
     if (/^pet_\d{4}[a-zA-Z]/.test(input)) {
-        return "Input Is Valid 🟢";
+        return "Valid Syntax 🟢";
     } else {
-        return "Input is Invalid 🔴";
+        return "Invalid Syntax 🔴";
     }
 }
 
