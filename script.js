@@ -2,13 +2,14 @@
 
 function validateInput(input) {
     // 
-    if (/^pet_\d{4}[a-zA-Z]/.test(input)) {
+    if (/^pet_\d{4}[a-zA-Z]*/.test(input)) {
+        //this code test the first code if its '^pet_',followed by 4digits and any characters next.
         return "Valid Syntax 🟢";
     } else {
         return "Invalid Syntax 🔴";
     }
 }
-
+//Button Function when clicked
 function validateSyntax() {
     //We got the id of the input so that we know what has been written inside of it.
     let input = document.getElementById('petInput').value; //we need to put this var inside a validateInput. So that it can see what has been written and what to validate (simply its our argument).
@@ -19,7 +20,6 @@ function validateSyntax() {
     const result = document.getElementById('result');
 
     result.textContent = validateInput(input); //this 'input' is from the real Input value.
-
 
 }
 
